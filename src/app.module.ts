@@ -4,6 +4,8 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import * as Joi from 'joi';
 import { ThrottlerModule } from '@nestjs/throttler';
+import { AuthModule } from './auth/auth.module';
+import { KeycloakModule } from './modules/keycloak/keycloak.module';
 
 @Module({
   imports: [
@@ -26,6 +28,8 @@ import { ThrottlerModule } from '@nestjs/throttler';
     }),
     MongooseModule.forRoot(process.env.MONGO_DB_URL),
     PokemonModule,
+    AuthModule,
+    KeycloakModule,
   ],
   controllers: [],
   providers: [],

@@ -26,5 +26,5 @@ services:
           client_id: 'pokemon-service'
           client_secret: '<update if using client authentication confidential access type for OIDC>'
           realm: pokemon
-          introspection_endpoint: 'http://192.168.0.20:9080/realms/pokemon/protocol/openid-connect/token/introspect'
-          discovery: 'http://192.168.0.20:9080/realms/pokemon/.well-known/openid-configuration'
+          introspection_endpoint: 'http://192.168.1.4:9080/realms/pokemon/protocol/openid-connect/token/introspect'
+          discovery: 'http://192.168.1.4:9080/realms/pokemon/.well-known/openid-configuration'

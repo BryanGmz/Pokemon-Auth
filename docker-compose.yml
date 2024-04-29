@@ -31,6 +31,8 @@ services:
       - kong-net
     volumes:
       - ./volumes/mongodbdata:/data/db
+    ports:
+      - '27017:27017' # Listener
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: password
